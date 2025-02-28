@@ -89,8 +89,8 @@ header #cart-count {
 /* Food Menu Section */
 #food-menu {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 items per row */
+    gap: 15px;
     margin-top: 80px;
     padding: 20px;
     width: 100%;
@@ -169,7 +169,8 @@ header #cart-count {
     }
 
     #food-menu {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 10px;
+        padding: 15px;
     }
 
     .food-item h3 {
@@ -200,9 +201,8 @@ header #cart-count {
     }
 
     #food-menu {
-        gap: 15px;
-        padding: 15px;
-        grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+        gap: 10px;
+        padding: 10px;
     }
 
     .food-item h3 {
