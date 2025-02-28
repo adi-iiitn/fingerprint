@@ -6,7 +6,6 @@
   <title>Food Delivery - Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fingerprint1.css">
-  <!-- Add Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -19,11 +18,12 @@
       <input type="text" id="search" placeholder="Search food or restaurant..." oninput="searchFood()">
     </div>
     <div class="cart-container">
-      <!-- Use Font Awesome cart icon -->
-      <i class="fas fa-shopping-cart cart-icon" onclick="window.location.href='cart.html'"></i>
-      <span id="cart-count">0</span> <!-- Display quantity of items -->
+      <i class="fas fa-shopping-cart cart-icon" onclick="window.location.href='aloo.html'"></i>
+      <span id="cart-count">0</span>
     </div>
   </header>
+
+  <img src="ATARRAFOODS (1) (1).png" alt="Test Image">
 
   <!-- Food Menu Section -->
   <div id="food-menu">
@@ -32,28 +32,28 @@
       <h3>Pizza Margherita</h3>
       <p class="restaurant-name">Pizza Palace</p>
       <p>₹ 299</p>
-      <button onclick="addToCart('Pizza Margherita', 299)">Add to Cart</button>
+      <button onclick="addToCart('Pizza Margherita', 299, 'COUNTRYBITE.jpeg')">Add to Cart</button>
     </div>
     <div class="food-item" data-name="Burger" data-restaurant="Burger King">
-      <img src="" alt="Burger">
+      <img src="rpyal.png" alt="Burger">
       <h3>Burger</h3>
       <p class="restaurant-name">Burger King</p>
       <p>₹ 150</p>
-      <button onclick="addToCart('Burger', 150)">Add to Cart</button>
+      <button onclick="addToCart('Burger', 150, 'rpyal.png')">Add to Cart</button>
     </div>
     <div class="food-item" data-name="Pasta" data-restaurant="Pasta House">
       <img src="food3.jpg" alt="Pasta">
       <h3>Pasta</h3>
       <p class="restaurant-name">Pasta House</p>
       <p>₹ 250</p>
-      <button onclick="addToCart('Pasta', 250)">Add to Cart</button>
+      <button onclick="addToCart('Pasta', 250, 'food3.jpg')">Add to Cart</button>
     </div>
     <div class="food-item" data-name="Sushi" data-restaurant="Sushi World">
       <img src="food4.jpg" alt="Sushi">
       <h3>Sushi</h3>
       <p class="restaurant-name">Sushi World</p>
       <p>₹ 500</p>
-      <button onclick="addToCart('Sushi', 500)">Add to Cart</button>
+      <button onclick="addToCart('Sushi', 500, 'food4.jpg')">Add to Cart</button>
     </div>
   </div>
 
