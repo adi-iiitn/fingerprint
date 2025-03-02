@@ -3,60 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Delivery - Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="fingerprint1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Food Delivery - Landing Page</title>
+  <link rel="stylesheet" href="tomato.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">
-      <h1>Atarra Foods</h1>
-    </div>
-    <div class="search-container">
-      <input type="text" id="search" placeholder="Search food or restaurant..." oninput="searchFood()">
-    </div>
-    <div class="cart-container">
-      <i class="fas fa-shopping-cart cart-icon" onclick="window.location.href='aloo.html'"></i>
-      <span id="cart-count">0</span>
-    </div>
-  </header>
-
-  <img src="ATARRAFOODS (1) (1).png" alt="Test Image">
-
-  <!-- Food Menu Section -->
-  <div id="food-menu">
-    <div class="food-item" data-name="Pizza Margherita" data-restaurant="Pizza Palace">
-      <img src="COUNTRYBITE.jpeg" alt="Pizza Margherita">
-      <h3>Pizza Margherita</h3>
-      <p class="restaurant-name">Pizza Palace</p>
-      <p>₹ 299</p>
-      <button onclick="addToCart('Pizza Margherita', 299, 'COUNTRYBITE.jpeg')">Add to Cart</button>
-    </div>
-    <div class="food-item" data-name="Burger" data-restaurant="Burger King">
-      <img src="rpyal.png" alt="Burger">
-      <h3>Burger</h3>
-      <p class="restaurant-name">Burger King</p>
-      <p>₹ 150</p>
-      <button onclick="addToCart('Burger', 150, 'rpyal.png')">Add to Cart</button>
-    </div>
-    <div class="food-item" data-name="Pasta" data-restaurant="Pasta House">
-      <img src="food3.jpg" alt="Pasta">
-      <h3>Pasta</h3>
-      <p class="restaurant-name">Pasta House</p>
-      <p>₹ 250</p>
-      <button onclick="addToCart('Pasta', 250, 'food3.jpg')">Add to Cart</button>
-    </div>
-    <div class="food-item" data-name="Sushi" data-restaurant="Sushi World">
-      <img src="food4.jpg" alt="Sushi">
-      <h3>Sushi</h3>
-      <p class="restaurant-name">Sushi World</p>
-      <p>₹ 500</p>
-      <button onclick="addToCart('Sushi', 500, 'food4.jpg')">Add to Cart</button>
-    </div>
+  <!-- Marquee for Free Delivery Text -->
+  <div class="marquee">
+    <p>FREE DELIVERY FOR EVERY ORDER</p>
   </div>
 
-  <script src="fingerprint1.js"></script>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="ATARRAFOODS (1) (1).png" alt="Foodie Delight Logo">
+    </div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Atarra Foods</h1>
+      <p>Order your favorite food from the best restaurants in town!</p>
+      <a href="potato.html" class="cta-button">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Our Restaurants Section -->
+  <section class="restaurants">
+    <h2>Our Restaurants</h2>
+    <div class="restaurant-grid">
+      <div class="restaurant-card">
+        <img src="COUNTRYBITE.jpeg" alt="Restaurant 1">
+        <h3>Country Bite</h3>
+      </div>
+      <div class="restaurant-card">
+        <img src="mansires.png" alt="Restaurant 2">
+        <h3>Mansi Restaurent</h3>
+      </div>
+      <div class="restaurant-card">
+        <img src="rpyal.png" alt="Restaurant 3">
+        <h3>Royal Family</h3>
+      </div>
+      <div class="restaurant-card">
+        <img src="restaurant4.jpg" alt="Restaurant 4">
+        <h3>Pizza Hut</h3>
+      </div>
+      <div class="restaurant-card">
+        <img src="restaurant5.jpg" alt="Restaurant 5">
+        <h3>Pizza Hub</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Atarra Foods. All rights reserved.</p>
+    <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+  </footer>
+
+  <script src="tomato.js"></script>
 </body>
 </html>
