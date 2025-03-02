@@ -1,0 +1,238 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Background */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FF6F61, #F7A400); /* Gradient from coral to golden */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Cart Icon Container */
+  .cart-icon-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    color: #fff;
+    background-color: #ff6f61;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    transform: scale(1.1);
+    background-color: #e65a50;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #fff;
+    color: #ff6f61;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  /* Cart Items Section */
+  #cart-items {
+    padding: 20px;
+    margin-top: 80px; /* Add margin to avoid overlap with cart icon */
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .cart-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .quantity-controls span {
+    font-size: 16px;
+  }
+  
+  .remove-item {
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Coupon Section */
+  .coupon-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .coupon-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .coupon-section button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #coupon-message {
+    margin-top: 10px;
+    color: #ff6f61;
+  }
+  
+  /* Total Section */
+  .total-section {
+    padding: 20px;
+    text-align: right;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .total-section h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .total-section #subtotal-price,
+  .total-section #delivery-fee,
+  .total-section #total-price {
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  
+  .total-section button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .total-section button:hover {
+    background-color: #e65a50;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .cart-icon-container {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .cart-icon {
+      font-size: 20px;
+      padding: 8px;
+    }
+  
+    #cart-count {
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+  
+    #cart-items {
+      margin-top: 60px;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cart-item img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .quantity-controls {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .total-section {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .total-section h3 {
+      font-size: 16px;
+    }
+  
+    .total-section button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
