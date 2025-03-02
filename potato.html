@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery - Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="potatonew.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <h1>Atarra Foods</h1>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search food or restaurant..." oninput="searchFood()">
+    </div>
+    <div class="cart-container">
+      <i class="fas fa-shopping-cart cart-icon" onclick="window.location.href='potato1.html'"></i>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!--<img src="ATARRAFOODS (1) (1).png" alt="Test Image"> -->
+
+  <!-- Food Menu Section -->
+  <div id="food-menu">
+    <div class="food-item" data-name="Chocolate Pastry" data-restaurant="Mansi Restaurent">
+      <img src="choco.jpeg" alt="Chocolate Pastry">
+      <h3>Chocolate Pastry</h3>
+      <p class="restaurant-name">Mansi Restaurent</p>
+      <p>₹ 50</p>
+      <button onclick="addToCart('Chocolate Pastry', 50, 'choco.jpeg', 'Mansi Restaurent')">Add to Cart</button>
+    </div>
+    <div class="food-item" data-name="Burger" data-restaurant="Burger King">
+      <img src="rpyal.png" alt="Burger">
+      <h3>Burger</h3>
+      <p class="restaurant-name">Burger King</p>
+      <p>₹ 150</p>
+      <button onclick="addToCart('Burger', 150, 'rpyal.png', 'Burger King')">Add to Cart</button>
+    </div>
+    <div class="food-item" data-name="Pasta" data-restaurant="Pasta House">
+      <img src="food3.jpg" alt="Pasta">
+      <h3>Pasta</h3>
+      <p class="restaurant-name">Pasta House</p>
+      <p>₹ 250</p>
+      <button onclick="addToCart('Pasta', 250, 'food3.jpg', 'Pasta House')">Add to Cart</button>
+    </div>
+    <div class="food-item" data-name="Sushi" data-restaurant="Sushi World">
+      <img src="food4.jpg" alt="Sushi">
+      <h3>Sushi</h3>
+      <p class="restaurant-name">Sushi World</p>
+      <p>₹ 500</p>
+      <button onclick="addToCart('Sushi', 500, 'food4.jpg', 'Sushi World')">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <script src="potato.js"></script>
+</body>
+</html>
