@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FF6F61, #F7A400); /* Gradient from coral to golden */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for background */
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #FFF; /* White text for contrast */
+    text-transform: uppercase;
+}
+
+header .search-container input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 25px;
+    border: 2px solid #00C2A0; /* Green border */
+    width: 150px;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+header .search-container input:focus {
+    border-color: #FF6F61; /* Coral color on focus */
+    transform: scale(1.05);
+}
+
+header .cart-container {
+    position: relative;
+    cursor: pointer;
+}
+
+header .cart-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .cart-icon:hover {
+    transform: scale(1.1);
+    color: #FF6F61; /* Change color on hover */
+}
+
+header #cart-count {
+    background-color: #FF6F61; /* Coral */
+    color: #FFF; /* White text */
+    padding: 3px 8px; /* Smaller padding */
+    border-radius: 50%;
+    position: absolute;
+    top: -10px; /* Adjust position */
+    right: -10px; /* Adjust position */
+    font-size: 0.8em; /* Smaller font size */
+    font-weight: bold;
+    min-width: 20px; /* Ensure it doesn't shrink too much */
+    text-align: center;
+    line-height: 1.2; /* Center text vertically */
+}
+
+/* Food Menu Section */
+#food-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 items per row */
+    gap: 10px; /* Reduced gap for smaller screens */
+    margin-top: 80px;
+    padding: 10px; /* Reduced padding for smaller screens */
+    width: 100%;
+}
+
+.food-item {
+    background-color: #FFF;
+    padding: 10px; /* Reduced padding for smaller screens */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.food-item img {
+    max-width: 100%; /* Ensures the image doesn’t exceed its container */
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 20px; /* Rounded corners */
+    transition: transform 0.4s ease; /* Smooth hover effect */
+}
+
+.food-item h3 {
+    font-size: 1em; /* Reduced font size for smaller screens */
+    margin: 8px 0;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.food-item .restaurant-name {
+    font-size: 0.8em; /* Reduced font size for smaller screens */
+    color: #00C2A0;
+    margin-bottom: 8px;
+}
+
+.food-item p {
+    font-size: 0.9em; /* Reduced font size for smaller screens */
+    color: #FF6F61;
+    margin-bottom: 8px;
+}
+
+.food-item button {
+    background-color: #00C2A0;
+    color: #FFF;
+    padding: 8px 16px; /* Reduced padding for smaller screens */
+    font-size: 0.8em; /* Reduced font size for smaller screens */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.food-item button:hover {
+    background-color: #009f85;
+    transform: translateY(-5px);
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.food-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Screens Less Than 480px */
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    header .search-container input {
+        width: 120px;
+        font-size: 0.9em;
+    }
+
+    #food-menu {
+        gap: 8px; /* Further reduced gap for very small screens */
+        padding: 8px; /* Further reduced padding for very small screens */
+    }
+
+    .food-item {
+        padding: 8px; /* Further reduced padding for very small screens */
+    }
+
+    .food-item img {
+        height: 100px; /* Further reduced height for very small screens */
+    }
+
+    .food-item h3 {
+        font-size: 0.9em; /* Further reduced font size for very small screens */
+    }
+
+    .food-item .restaurant-name {
+        font-size: 0.7em; /* Further reduced font size for very small screens */
+    }
+
+    .food-item p {
+        font-size: 0.8em; /* Further reduced font size for very small screens */
+    }
+
+    .food-item button {
+        font-size: 0.7em; /* Further reduced font size for very small screens */
+        padding: 6px 12px; /* Further reduced padding for very small screens */
+    }
+}
