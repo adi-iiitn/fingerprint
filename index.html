@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Delivery - Landing Page</title>
+  <title>Food Delivery - Parallax Landing Page</title>
   <link rel="stylesheet" href="tomato.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
   <!-- Marquee for Free Delivery Text -->
@@ -25,38 +26,59 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero Section with Parallax -->
+  <section class="hero parallax" data-parallax="scroll" data-image-src="https://tse4.mm.bing.net/th?id=OIP.G9UDiP14fJbRG1iim9YRAwHaDt&pid=Api&P=0&h=180">
     <div class="hero-content">
-      <h1>Welcome to Atarra Foods</h1>
-      <p>Order your favorite food from the best restaurants in town!</p>
-      <a href="potato.html" class="cta-button">Explore Menu</a>
+      <h1 data-aos="fade-up" data-aos-duration="1000">Welcome to Atarra Foods</h1>
+      <p data-aos="fade-up" data-aos-duration="1200">Order your favorite food from the best restaurants in town!</p>
+      <a href="potato.html" class="cta-button" data-aos="fade-up" data-aos-duration="1400">Explore Menu</a>
     </div>
   </section>
 
   <!-- Our Restaurants Section -->
   <section class="restaurants">
-    <h2>Our Restaurants</h2>
+    <h2 data-aos="fade-up" data-aos-duration="1000">Our Restaurants</h2>
     <div class="restaurant-grid">
-      <div class="restaurant-card">
+      <div class="restaurant-card" data-aos="fade-up" data-aos-duration="1200">
         <img src="COUNTRYBITE.jpeg" alt="Restaurant 1">
         <h3>Country Bite</h3>
       </div>
-      <div class="restaurant-card">
+      <div class="restaurant-card" data-aos="fade-up" data-aos-duration="1400">
         <img src="mansires.png" alt="Restaurant 2">
-        <h3>Mansi Restaurent</h3>
+        <h3>Mansi Restaurant</h3>
       </div>
-      <div class="restaurant-card">
+      <div class="restaurant-card" data-aos="fade-up" data-aos-duration="1600">
         <img src="rpyal.png" alt="Restaurant 3">
         <h3>Royal Family</h3>
       </div>
-      <div class="restaurant-card">
+      <div class="restaurant-card" data-aos="fade-up" data-aos-duration="1800">
         <img src="restaurant4.jpg" alt="Restaurant 4">
         <h3>Pizza Hut</h3>
       </div>
-      <div class="restaurant-card">
+      <div class="restaurant-card" data-aos="fade-up" data-aos-duration="2000">
         <img src="restaurant5.jpg" alt="Restaurant 5">
         <h3>Pizza Hub</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section with Parallax -->
+  <section class="how-it-works parallax" data-parallax="scroll" data-image-src="https://source.unsplash.com/1600x900/?kitchen,food">
+    <div class="how-it-works-content">
+      <h2 data-aos="fade-up" data-aos-duration="1000">How It Works</h2>
+      <div class="steps">
+        <div class="step" data-aos="fade-up" data-aos-duration="1200">
+          <h3>1. Choose</h3>
+          <p>Select your favorite dishes from our menu.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-duration="1400">
+          <h3>2. Order</h3>
+          <p>Place your order with just a few clicks.</p>
+        </div>
+        <div class="step" data-aos="fade-up" data-aos-duration="1600">
+          <h3>3. Enjoy</h3>
+          <p>Get your food delivered hot and fresh.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -67,6 +89,15 @@
     <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
   <script src="tomato.js"></script>
+  <script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init();
+
+    // Initialize Parallax
+    $('.parallax').parallax();
+  </script>
 </body>
 </html>
